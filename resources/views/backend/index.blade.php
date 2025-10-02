@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap'); 
+*
+{	
+  box-sizing: border-box;	
+  font-family: 'Poppins', sans-serif;	 
+  margin: 0;	
+  padding: 0;
+} 
+body
+{
+  align-items: center;
+  background: #091921;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+} 
+.form
+{	
+  background: #091921;	
+  border-radius: 10px;	
+  box-shadow: -5px -5px 8px rgba(255,255,255,0.1),	 5px 5px 15px rgba(0,0,0,0.8);	
+  padding: 50px 20px 60px;	
+  position: relative;	
+  text-align: center;	
+  width: 370px;
+} 
+.form h2
+{
+  color:#22F2AA;	
+  font-size: 28px;	
+  font-weight: 700;	
+  text-shadow: 0 0 10px #22F2AA;	text-transform: uppercase;
+}
+.form .form-content
+{
+  margin: 45px 22px;	
+  text-align: left;
+} 
+.form .form-content .form-box
+{	
+  margin-top: 25px;
+} 
+.form .form-content .form-box label
+{	
+  color: #FFFFFF;
+  display: block;	
+  font-size: 18px;	
+  letter-spacing: 2px;	
+  margin-bottom: 5px;
+} 
+.form .form-content .form-box input
+{
+  background: #091921;	
+  border: none;	
+  border-radius: 10px;	
+  box-shadow: inset -3px -3px 6px rgba(255,255,255,0.1),
+              inset 3px 3px 6px rgba(0,0,0,0.8);	
+  color:#6f6f6f;	
+  font-size: 18px;	
+  height: 50px;	
+  outline: none;	
+  padding: 5px 15px;
+  width: 100%;
+}
+.form .form-content .form-box input:focus
+{
+  text-shadow: 0 0 10px #22F2AA;	
+  color: #22F2AA;
+}
+.form .form-content .form-box input[type="submit"]{	
+  box-shadow: -3px -3px 6px rgba(255,255,255,0.1),
+               3px 3px 6px rgba(0,0,0,0.8);	
+  font-weight: 600;	
+  margin-top: 20px;
+}
+.form .form-content .form-box input[type="submit"]:active{	
+  box-shadow: 0 0 20px #22F2AA;	
+  background: #22F2AA;	
+  color: #091921;
+} 
+.form .form-content .form-box input::placeholder
+{	
+  color: #6f6f6f;	
+  font-size: 18px;
+}
+.form-forget
+{	
+  color: #6f6f6f;	
+  margin-top: 30px;
+} 
+.form-forget a
+{	
+  color:#22F2AA;	
+  text-shadow: 0 0 10px #22F2AA;
+} 
+    </style>
+</head>
+<body>
+  <div class="form">
+    <h2>Login</h2>	
+    <form action="{{ route('login') }}" method="POST">
+        @csrf 
+        <div class="form-content">	
+            <div class="form-box">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="email.com" required>
+            </div>		
+            <div class="form-box">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>	
+            <div class="form-box">
+                <input type="submit" value="Log In">
+            </div>	
+        </div>	
+    </form>   
+  </div> 
+</body>
+</html>
