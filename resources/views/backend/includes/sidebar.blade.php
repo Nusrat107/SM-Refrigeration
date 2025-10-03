@@ -24,9 +24,11 @@
                       </ul>
                   </li>
                    <li>
-                      <a href="{{url('/admin/logout')}}"><i class="fa-solid fa-right-from-bracket"></i><span style="color: red">লগ আউট</span></a>
+                      <a class="dropdown-item" href="{{url('/admin/profile')}}">প্রােফাইল</a>
                   </li>
-							
+                   <li>
+                      <a href="{{url('/admin/logout')}}"><i class="fa-solid fa-right-from-bracket"></i><span style="color: red">লগ আউট</span></a>
+                  </li>		
                     </ul>
                 </div>
             </div>

@@ -6,10 +6,10 @@
 
         <!-- পেজ হেডার -->
         <div class="row mb-3">
-            <div class="col-sm-4 col-3">
+            <div class="col-sm-4 col-3 mt-3">
                 <h4 class="page-title">ইনভয়েস তালিকা</h4>
             </div>
-            <div class="col-sm-8 col-9 text-right">
+            <div class="col-sm-8 col-9 text-right mt-3">
                 <a href="{{ url('/admin/create-invoice') }}" class="btn btn-light btn-sm">
                     <i class="fa fa-plus"></i> নতুন ইনভয়েস তৈরি করুন
                 </a>
@@ -55,7 +55,9 @@
                         <td>
     <a href="{{ url('/admin/invoice-view/'.$invoice->id) }}" class="btn btn-info btn-sm mb-1"><i class="fa fa-eye"></i></a>
     <a href="{{ url('/admin/invoice-edit/'.$invoice->id) }}" class="btn btn-warning btn-sm mb-1"><i class="fa fa-edit"></i></a>
-    <a href="{{ url('/admin/invoice-delete/'.$invoice->id) }}" class="btn btn-danger btn-sm mb-1" onclick="return confirm('আপনি কি এই ইনভয়েসটি মুছে ফেলতে চান?')"><i class="fa fa-trash"></i></a>
+   @if (Auth::user()->role == "admin")
+        <a href="{{ url('/admin/invoice-delete/'.$invoice->id) }}" class="btn btn-danger btn-sm mb-1" onclick="return confirm('আপনি কি এই ইনভয়েসটি মুছে ফেলতে চান?')"><i class="fa fa-trash"></i></a>
+   @endif
 </td>
                     </tr>
                     @empty

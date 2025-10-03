@@ -25,7 +25,9 @@ Route::post('/admin/create-invoice/store', [InvoiceController::class, 'invoiceSt
 Route::get('/admin/invoice-view/{id}', [InvoiceController::class, 'invoiceView']);
 Route::get('/admin/invoice-edit/{id}', [InvoiceController::class, 'invoiceEdit']);
 Route::post('/admin/invoice-update/{id}', [InvoiceController::class, 'invoiceUpdate']);
-Route::get('/admin/invoice-delete/{id}', [InvoiceController::class, 'invoiceDelete']);
+Route::middleware(['role:admin'])->group(function () {
+    Route::get('/admin/invoice-delete/{id}', [InvoiceController::class, 'invoiceDelete']);
+});
 Route::get('/admin/invoice-print/{id}', [InvoiceController::class, 'invoicePrint']);
 
 //Tecnician
@@ -33,7 +35,9 @@ Route::get('/admin/tecnician/create', [TecnicianController::class, 'tecnicianCre
 Route::post('/admin/tecnician/store', [TecnicianController::class, 'tecnicianStore']);
 Route::get('/admin/tecnician/list', [TecnicianController::class, 'tecnicianList']);
 Route::get('/admin/tecnician/view/{id}', [TecnicianController::class, 'tecnicianView']);
-Route::get('/admin/tecnician/delete/{id}', [TecnicianController::class, 'tecnicianDelete']);
+Route::middleware(['role:admin'])->group(function () {
+    Route::get('/admin/tecnician/delete/{id}', [TecnicianController::class, 'tecnicianDelete']);
+});
 Route::get('/admin/tecnician/edit/{id}', [TecnicianController::class, 'tecnicianEdit']);
 Route::post('/admin/tecnician/edit/update/{id}', [TecnicianController::class, 'tecnicianUpdate']);
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TechnicianRequest;
 use App\Models\Technician;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class TecnicianController extends Controller
         return view('backend.tecnician.create');
     }
 
-    public function tecnicianStore(Request $request)
+    public function tecnicianStore(TechnicianRequest $request)
     {
         $tecnician = new Technician();
 

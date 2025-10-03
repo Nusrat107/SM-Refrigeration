@@ -59,7 +59,9 @@
                                         <td>
                                             <a href="{{ url('/admin/tecnician/view/'.$tecnician->id) }}" class="btn btn-info btn-sm mb-1"><i class="fa fa-eye"></i></a>
                                             <a href="{{url('/admin/tecnician/edit/'.$tecnician->id)}}" class="btn btn-warning btn-sm mb-1"><i class="fa fa-edit"></i></a>
+                                              @if (Auth::user()->role == "admin")
                                             <a href="{{ url('/admin/tecnician/delete/'.$tecnician->id) }}" class="btn btn-danger btn-sm mb-1" onclick="return confirm('Are you sure you want to delete this Tecnician?')"><i class="fa fa-trash"></i></a>
+                                            @endif
                                         </td>
                                     </tr>
                                     @endforeach

@@ -24,21 +24,33 @@
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">নাম</label>
                                         <input type="text" class="form-control" name="name">
+                                        @error('name')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <!-- ফোন নাম্বার -->
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">ফোন নাম্বার</label>
                                         <input type="text" class="form-control" name="phone">
+                                          @error('phone')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <!-- জন্ম তারিখ -->
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">জন্ম তারিখ</label>
                                         <input type="date" class="form-control" name="dob">
+                                         @error('dob')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <!-- এনআইডি -->
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">এনআইডি নাম্বার</label>
                                         <input type="text" class="form-control" name="nid">
+                                         @error('nid')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <!-- পাসপোর্ট (অপশনাল) -->
                                     <div class="col-md-6 mb-3">
@@ -49,26 +61,41 @@
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">বর্তমান ঠিকানা</label>
                                         <input type="text" class="form-control" name="present_address">
+                                         @error('present_address')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <!-- স্থায়ী ঠিকানা -->
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">স্থায়ী ঠিকানা</label>
                                         <input type="text" class="form-control" name="permanent_address">
+                                         @error('permanent_address')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <!-- জয়েন তারিখ -->
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">জয়েন তারিখ</label>
                                         <input type="date" class="form-control" name="join_date">
+                                         @error('join_date')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <!-- কাজের ধরন -->
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">কাজের ধরন</label>
                                         <input type="text" class="form-control" name="Type_of_work">
+                                         @error('Type_of_work')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <!-- পাসপোর্ট সাইজ ছবি -->
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">পাসপোর্ট সাইজ ছবি</label>
                                         <input type="file" class="form-control" name="image">
+                                         @error('image')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                 </div>
 

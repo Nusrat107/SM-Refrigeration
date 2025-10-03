@@ -40,10 +40,16 @@
                         <div class="col-md-4 mb-3">
                             <label>মোবাইল নম্বর</label>
                             <input type="text" class="form-control" name="contact_number" placeholder="">
+                             @error('contact_number')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                         </div>
                         <div class="col-md-4 mb-3">
                             <label>ঠিকানা</label>
                             <input type="text" class="form-control" name="district" placeholder="">
+                             @error('district')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                         </div>
                     </div>
 
@@ -84,14 +90,23 @@
                         <div class="col-md-4 mb-3">
                             <label>পণ্যের ব্র্যান্ড</label>
                             <input type="text" class="form-control" name="product_brand" placeholder="">
+                             @error('product_brand')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                         </div>
                         <div class="col-md-4 mb-3">
                             <label>পণ্যের মডেল</label>
                             <input type="text" class="form-control" name="product_model" placeholder="">
+                             @error('product_model')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                         </div>
                         <div class="col-md-4 mb-3">
                             <label>পণ্যের পরিমাণ</label>
                             <input type="number" class="form-control" name="product_quantity" placeholder="">
+                             @error('product_quantity')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                         </div>
                     </div>
 
@@ -104,6 +119,9 @@
                         <div class="col-md-4 mb-3">
                             <label>পণ্যের ধরণ</label>
                             <input type="text" class="form-control" name="product_category" placeholder="">
+                             @error('product_category')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                         </div>
                         <div class="col-md-4 mb-3">
                             <label>টেকনিশিয়ানের ফলাফল</label>
@@ -148,6 +166,9 @@
                         <div class="col-md-4 mb-3">
                             <label>গ্রাহকের নাম</label>
                             <input type="text" class="form-control" name="customer_name" placeholder="">
+                             @error('customer_name')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                         </div>
                         <div class="col-md-4 mb-3">
                             <label>রেফারেন্স খরচ</label>
@@ -156,6 +177,9 @@
                         <div class="col-md-4 mb-3">
                             <label>পণ্য গ্রহণের তারিখ</label>
                             <input type="date" class="form-control" name="product_received_date" placeholder="">
+                             @error('product_received_date')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                         </div>
                     </div>
 

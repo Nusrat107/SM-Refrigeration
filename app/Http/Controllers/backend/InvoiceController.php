@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\InvoiceRequest;
 use App\Models\Invoice;
 use App\Models\Technician;
 use Illuminate\Http\Request;
@@ -34,7 +35,7 @@ class InvoiceController extends Controller
         return view('backend.invoice-create');
     }
 
-    public function invoiceStore(Request $request)
+    public function invoiceStore(InvoiceRequest $request)
     {
         $invoice = new Invoice();
 
